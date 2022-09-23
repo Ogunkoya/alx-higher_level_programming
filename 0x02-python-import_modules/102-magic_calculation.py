@@ -1,5 +1,5 @@
 def magic_calculation(a, b):
-    from calculation_1 import add, sub
+    from magic_calculation_102 import add, sub
 
     if a < b:
         c = add(a, b)
