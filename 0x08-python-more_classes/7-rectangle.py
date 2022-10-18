@@ -17,6 +17,7 @@ class Rectangle:
         """prints a string when an instance has been deleted"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
+    
     @property
     def width(self):
         """getter for the private instance attribute width"""
@@ -60,9 +61,9 @@ class Rectangle:
         """returns printable string representation of the rectangle"""
         string = ""
         if self.__width != 0 and self.__height != 0:
-            string += "\n".join("#" * self.__width \
+            string += "\n".join(str(self.print_symbol) * self.__width \
                     for j in range(self.__height))
-            return string
+        return string
     def __repr__(self):
         """returns a string representation of the rectangle for reproduction"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
